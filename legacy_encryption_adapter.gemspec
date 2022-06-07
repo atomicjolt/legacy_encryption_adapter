@@ -3,7 +3,7 @@ require_relative 'lib/legacy_encryption_adapter/version'
 Gem::Specification.new do |spec|
   spec.name          = "legacy_encryption_adapter"
   spec.version       = LegacyEncryptionAdapter::VERSION
-  spec.authors       = ["Nick Benoit"]
+  spec.authors       = ["Atomic Jolt"]
   spec.email         = ["nick.benoit@atomicjolt.com"]
 
   spec.summary       = "summary"
