@@ -54,11 +54,17 @@ module LegacyEncryptionAdapter
                             true
                           end
 
-      # When we write set both rails 7 encrypted field and legacy field
-      if should_use_legacy == true 
+      begin
         legacy_encryption_adapter_attr_encrypted_encrypt(property_name, property_value)
+      rescue StandardError => e
+        Rails.logger.error('Error setting legacy encrypted fields', e)
       end
-      non_legacy_behavior.call
+
+      begin
+        non_legacy_behavior.call
+      rescue StandardError => e
+        Rails.logger.error('Error setting new encrypted fields', e)
+      end
     end
   end
 
