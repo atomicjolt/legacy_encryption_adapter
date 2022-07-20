@@ -1,7 +1,7 @@
 PATH
   remote: .
   specs:
-    legacy_encryption_adapter (0.1.0)
+    legacy_encryption_adapter (0.2.0)
 
 GEM
   remote: https://rubygems.org/
